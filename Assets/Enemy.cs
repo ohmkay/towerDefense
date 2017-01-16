@@ -6,16 +6,16 @@ public class Enemy : MonoBehaviour {
 
         private Transform target;
         private int wayPointIndex = 0;
+        private Vector3 dir;
 
         void Start ()
         {
-
             target = Waypoint.points[0];		
         }
 
         void Update ()
         {
-            Vector3 dir = target.position - transform.position;
+            dir = target.position - transform.position;
         
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour {
             {
                  GetNextWaypoint();
             }
-            
         }
     
         void GetNextWaypoint()

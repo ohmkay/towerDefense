@@ -10,7 +10,7 @@ public class Waypoint : MonoBehaviour {
 
         for (int i = 0; i < points.Length; i++)
         {
-            transform.GetChild(i);
+            points[i] = transform.GetChild(i);
         }
     }
 

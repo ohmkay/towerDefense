@@ -1,0 +1,26 @@
+﻿using UnityEngine;
+
+public class Waypoint : MonoBehaviour {
+
+    public static Transform[] points;
+
+    void Awake ()
+    {
+        points = new Transform[transform.childCount];
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            transform.GetChild(i);
+        }
+    }
+
+	void Start ()
+    {
+		
+	}
+	
+	void Update ()
+    {
+		
+	}
+}
